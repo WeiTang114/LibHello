@@ -2,15 +2,15 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 // This is the library version used when deploying the artifact
-version = "1.0.1"
+version = "1.0.2"
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
     resourcePrefix "libhello__" 	//這個隨便填
     defaultConfig {
-        minSdkVersion 9
+        minSdkVersion 11
         targetSdkVersion 21
-        versionCode 2
+        versionCode 3
         versionName version
     }
     buildTypes {
@@ -22,6 +22,8 @@ android {
 }
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:cardview-v7:22.0.0'
+    compile 'com.android.support:recyclerview-v7:22.0.0'
 }
 
 def siteUrl = 'https://github.com/WeiTang114/LibHello'       //項目的主頁

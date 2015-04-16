@@ -9,6 +9,10 @@
             android:name=".activity.HelloActivity"
             android:label="@string/title_activity_main" >
         </activity>
+        <activity
+            android:name=".activity.HelloCardsActivity"
+            android:label="@string/title_activity_hello_cards" >
+        </activity>
     </application>
 
 </manifest>
