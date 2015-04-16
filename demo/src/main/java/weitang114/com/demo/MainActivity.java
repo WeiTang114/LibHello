@@ -1,18 +1,18 @@
 package weitang114.com.demo;
 
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
 import android.widget.TextView;
 
 import weitang114.com.libhello.Hello;
+import weitang114.com.libhello.activity.HelloActivity;
 
 
 public class MainActivity extends Activity {
@@ -51,6 +51,16 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    public void onButtonClicked(View v) {
+
+        // start HelloActivity
+        Intent intent = new Intent();
+        intent.setClass(this, HelloActivity.class);
+        startActivity(intent);
+    }
+
+
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -66,5 +76,6 @@ public class MainActivity extends Activity {
             ((TextView)rootView.findViewById(R.id.hello)).setText(new Hello().get());
             return rootView;
         }
+
     }
 }
