@@ -1,1 +1,1 @@
-include ':libhello'
+include ':libhello', ':demo'
