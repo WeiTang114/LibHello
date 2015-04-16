@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import weitang114.com.libhello.Hello;
 import weitang114.com.libhello.activity.HelloActivity;
+import weitang114.com.libhello.activity.HelloCardsActivity;
 
 
 public class MainActivity extends Activity {
@@ -57,6 +58,14 @@ public class MainActivity extends Activity {
         // start HelloActivity
         Intent intent = new Intent();
         intent.setClass(this, HelloActivity.class);
+        startActivity(intent);
+    }
+
+    public void onButton2Clicked(View v) {
+
+        // start HelloActivity
+        Intent intent = new Intent();
+        intent.setClass(this, HelloCardsActivity.class);
         startActivity(intent);
     }
 
